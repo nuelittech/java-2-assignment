@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+
+
+
+// Define the quiz questions and answers
+const quizQuestions = [
+  {
+    question: "Who was the 13th president of Nigeria?",
+    correctAnswer: "Umaru Yar'Adua",
+    birthYear: 1951,
+  },
+  {
+    question: "Who was the 14th president of Nigeria?",
+    correctAnswer: "Goodluck Jonathan",
+    birthYear: 1957,
+  },
+  {
+    question: "Who was the 15th president of Nigeria?",
+    correctAnswer: "Muhammadu Buhari",
+    birthYear: 1942,
+  },
+  {
+    question: "Who was the 16th president of Nigeria?",
+    correctAnswer: "Olusegun Obasanjo",
+    birthYear: 1937,
+  },
+  {
+    question: "Who was the 17th president of Nigeria?",
+    correctAnswer: "Mohammadu Buhari",
+    birthYear: 1942,
+  },
+];
+
+// Get the student username and passcode using the prompt
+const username = prompt("Please enter your username:");
+const passcode = prompt("Please enter your passcode:");
+
+// Initialize the score to 0
+let score = 0;
+
+// Loop through the quiz questions
+for (let i = 0; i < quizQuestions.length; i++) {
+  // Get the current quiz question
+  const quizQuestion = quizQuestions[i];
+
+  // Prompt the student to answer the question
+  const studentAnswer = prompt(`${quizQuestion.question} (Born in: ${quizQuestion.birthYear})`);
+
+  // Check if the student answer is correct
+  if (studentAnswer.toLowerCase() === quizQuestion.correctAnswer.toLowerCase()) {
+    // Add 10% to the score
+    score += 10;
+  }
+}
+
+
+
+
+// Display the quiz results
+document.write(`<h1>${username} ${passcode} ${score}`)
+   </script> 
+</body>
+</html>

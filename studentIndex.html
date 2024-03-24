@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+
+// Initialize the student index
+const studentIndex = [
+  { id: 1, name: "John Doe", age: 20, grade: "A" },
+  { id: 2, name: "Jane Doe", age: 22, grade: "B" },
+  { id: 3, name: "Jim Smith", age: 25, grade: "C" },
+  { id: 4, name: "Jill Smith", age: 27, grade: "D" },
+  { id: 5, name: "Jack Johnson", age: 30, grade: "E" },
+  { id: 6, name: "Jill Johnson", age: 32, grade: "F" },
+  { id: 7, name: "Jake Brown", age: 35, grade: "G" },
+  { id: 8, name: "Jessica Brown", age: 37, grade: "H" },
+  { id: 9, name: "James White", age: 40, grade: "I" },
+  { id: 10, name: "Jill White", age: 42, grade: "J" },
+];
+
+// Function to remove a student from the index by id
+function removeStudent(id) {
+  const index = studentIndex.findIndex(student => student.id === id);
+  if (index !== -1) {
+    studentIndex.splice(index, 1);
+    console.log(`Student with id ${id} has been removed.`);
+  } else {
+    console.log("Invalid index. Please input a valid index.");
+  }
+}
+
+// Prompt the user for a student id to remove
+const idToRemove = prompt("Enter the id of the student to remove:");
+removeStudent(idToRemove);
+
+// Display the updated student index
+console.log(studentIndex);
+
+
+
+
+  </script>  
+</body>
+</html>

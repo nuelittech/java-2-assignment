@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+
+
+// Initialize the counter for the number of users
+let userCounter = 0;
+
+// Loop 10 times to get the data of 10 users
+while (userCounter < 10) {
+  // Get the user data using the prompt
+  const userData = prompt(`Please enter your data for user ${userCounter + 1}:`);
+
+  // Check if the user data is defined
+  if (userData === undefined) {
+    alert(`Data for user ${userCounter + 1} is undefined.`);
+  } else {
+    // Check if the user data is a string or a number
+    if (typeof userData === "string") {
+      alert(`Data for user ${userCounter + 1} is a string: ${userData}`);
+    } else if (typeof userData === "number") {
+      alert(`Data for user ${userCounter + 1} is a number: ${userData}`);
+    } else {
+      alert(`Data for user ${userCounter + 1} is neither a string nor a number.`);
+    }
+  }
+
+  // Increment the counter for the number of users
+  userCounter++;
+}
+
+  </script>  
+</body>
+</html>
